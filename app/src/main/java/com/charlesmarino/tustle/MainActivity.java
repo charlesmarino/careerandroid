@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         setupToolbar();
         setupFab();
-        setupTablayout();
         setUpdateState();
     }
 
@@ -60,16 +59,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ab.setHomeAsUpIndicator(R.drawable.ic_fab_star);
         ab.setDisplayHomeAsUpEnabled(true);
     }
-
-    private void setupTablayout(){
-        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-        tabLayout.addTab(tabLayout.newTab().setText("Tab 1"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab 2"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab 3"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab 4"));
-    }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
