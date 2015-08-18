@@ -15,8 +15,11 @@
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorAccent"
-        app:tabIndicatorColor="?attr/colorPrimary"/>
+        android:background="?attr/colorPrimary"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabIndicatorColor="@color/my_third_accent"/>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"

@@ -19,6 +19,7 @@
             android:layout_marginTop="270dp"
             android:background="@drawable/rounded_corner_button"
             android:text="Login"
+            android:textColor="?android:attr/textColorPrimary"
             android:textSize="20sp"/>
 
     </LinearLayout>
@@ -33,20 +34,22 @@
             android:id="@+id/firstTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_marginTop="20dp"
             android:text="How it works"
+            android:textColor="?android:attr/textColorSecondary"
             android:textSize="20sp"/>
 
         <TextView
             android:id="@+id/secondTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_marginTop="20dp"
             android:text="blah blah blah blah"
+            android:textColor="?android:attr/textColorSecondary"
             android:textSize="20sp"/>
 
     </LinearLayout>
