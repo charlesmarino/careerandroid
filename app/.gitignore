@@ -1,1 +1,7 @@
 /build
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/captures
+/linkedin-sdk/build
+*.iml
