@@ -1,15 +1,12 @@
 package com.charlesmarino.tustle;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.design.widget.TabLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -18,7 +15,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,14 +31,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public static final String PACKAGE_MOBILE_SDK_SAMPLE_APP = "com.linkedin.android.mobilesdksampleapp";
     FloatingActionButton fab;
-    TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setupToolbar();
         setupFab();
+        setupToolbar();
+        setupLoginButton();
         setUpdateState();
     }
 
@@ -58,6 +54,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         final ActionBar ab = getSupportActionBar();
         ab.setHomeAsUpIndicator(R.drawable.ic_fab_star);
         ab.setDisplayHomeAsUpEnabled(true);
+    }
+
+    private void setupLoginButton() {
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), HomeActivity.class);
+                startActivity(intent);
+            }
+        };
+        ((SplashView) findViewById(R.id.splashView)).setSplashOnClickListener(listener);
     }
 
     @Override
@@ -86,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
         if (v.getId() == R.id.fab) {
-String TAG ="d";
+            String TAG ="d";
             try {
                 PackageInfo info = getPackageManager().getPackageInfo(
                         PACKAGE_MOBILE_SDK_SAMPLE_APP,
