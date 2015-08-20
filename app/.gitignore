@@ -5,3 +5,4 @@
 /captures
 /linkedin-sdk/build
 *.iml
+*.class
