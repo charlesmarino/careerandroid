@@ -4,6 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import com.charlesmarino.tustle.Fragments.ArticlesFragment;
+import com.charlesmarino.tustle.Fragments.SnapshotFragment;
+
 /**
  * Pager adapter for the sliding tabs in the home activity
  * Created by kirstiebooras on 8/17/15.
@@ -18,8 +21,11 @@ public class HomeActivityPagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new Fragment();
+                return new SnapshotFragment();
             case 1:
+                return new Fragment();
+            case 2:
+                return new ArticlesFragment();
             default:
                 return new Fragment();
         }
@@ -27,17 +33,20 @@ public class HomeActivityPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "First Tab";
+                return "Snapshots";
             case 1:
+                return "Products";
+            case 2:
+                return "Articles";
             default:
-                return "Second Tab";
+                return "Tab";
         }
     }
 
