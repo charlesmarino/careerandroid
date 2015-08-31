@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.charlesmarino.tustle.R;
 
@@ -25,8 +26,14 @@ public class ArticlesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_articles, container, false);
 
         WebView webView = (WebView) view.findViewById(R.id.webview);
-        //webView.getSettings().setJavaScriptEnabled(true);
         webView.loadUrl(BLOG_URL);
+        webView.setWebViewClient(new WebViewClient(){
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url){
+                view.loadUrl(url);
+                return true;
+            }
+        });
 
         return view;
 
