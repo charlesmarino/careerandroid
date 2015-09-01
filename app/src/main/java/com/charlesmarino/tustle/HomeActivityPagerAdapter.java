@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.charlesmarino.tustle.Fragments.ArticlesFragment;
+import com.charlesmarino.tustle.Fragments.ProductFragment;
 import com.charlesmarino.tustle.Fragments.SnapshotFragment;
 
 /**
@@ -23,7 +24,7 @@ public class HomeActivityPagerAdapter extends FragmentStatePagerAdapter {
             case 0:
                 return new SnapshotFragment();
             case 1:
-                return new Fragment();
+                return new ProductFragment();
             case 2:
                 return new ArticlesFragment();
             default:

@@ -1,10 +1,13 @@
-package com.charlesmarino.tustle;
+package com.charlesmarino.tustle.Activities;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
+import com.charlesmarino.tustle.HomeActivityPagerAdapter;
+import com.charlesmarino.tustle.R;
 
 /**
  * Home activity with sliding views and tabs

@@ -1,4 +1,4 @@
-package com.charlesmarino.tustle;
+package com.charlesmarino.tustle.Activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -18,6 +18,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.charlesmarino.tustle.Activities.HomeActivity;
+import com.charlesmarino.tustle.R;
+import com.charlesmarino.tustle.SplashView;
 import com.linkedin.platform.LISession;
 import com.linkedin.platform.LISessionManager;
 import com.linkedin.platform.errors.LIAuthError;
